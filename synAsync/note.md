@@ -47,8 +47,54 @@ It collects data such as:
 
 ✅ Error counts
 
+## 📌 Benefits of NIC Profiling
 
-<pre lang="markdown"> ## 📌 Benefits of NIC Profiling ### 1. 🔍 Identify Network Bottlenecks Determine if communication delays (not GPU/CPU) are the main cause of performance slowdowns. ### 2. 🔄 Correlate Network & Compute Activity See how NIC activity overlaps with GPU kernels, MPI calls, or CPU threads. Detect whether communication stalls computation. ### 3. 🧪 Optimize Distributed Workloads Useful for improving performance in: - MPI-based applications - Deep learning frameworks (e.g., Horovod, DDP) - Scientific simulations with halo exchange patterns ### 4. 📡 Ideal for InfiniBand & NVLink Fabrics Best used on systems with: - Mellanox/NVIDIA ConnectX NICs - NVLink-over-Fabric - InfiniBand clusters ### 5. ⚖️ Balance Communication & Computation Answer questions like: - Is your GPU waiting on data? - Are network links underutilized? - Can communication be overlapped with computation? --- ## 📄 What You Get in the Nsight Report With `--nic-metrics=true`, the Nsight Systems report will include: - 📊 NIC bandwidth usage (GB/s) - 📦 Packet counts and sizes - 🧵 NIC queue activity - 🕒 Timeline correlation with CPU and GPU operations --- ## 📚 Additional Resources - [NVIDIA Nsight Systems Documentation](https://docs.nvidia.com/nsight-systems/) - [OpenACC Programming Guide](https://www.openacc.org/) </pre>
+### 1. 🔍 Identify Network Bottlenecks
+Determine if communication delays (not GPU/CPU) are the main cause of performance slowdowns.
+
+### 2. 🔄 Correlate Network & Compute Activity
+See how NIC activity overlaps with GPU kernels, MPI calls, or CPU threads.
+
+Detect whether communication stalls computation.
+
+### 3. 🧪 Optimize Distributed Workloads
+Useful for improving performance in:
+
+- MPI-based applications  
+- Deep learning frameworks (e.g., Horovod, DDP)  
+- Scientific simulations with halo exchange patterns
+
+### 4. 📡 Ideal for InfiniBand & NVLink Fabrics
+Best used on systems with:
+
+- Mellanox/NVIDIA ConnectX NICs  
+- NVLink-over-Fabric  
+- InfiniBand clusters
+
+### 5. ⚖️ Balance Communication & Computation
+Answer questions like:
+
+- Is your GPU waiting on data?  
+- Are network links underutilized?  
+- Can communication be overlapped with computation?
+
+---
+
+## 📄 What You Get in the Nsight Report
+
+With `--nic-metrics=true`, the Nsight Systems report will include:
+
+- 📊 NIC bandwidth usage (GB/s)  
+- 📦 Packet counts and sizes  
+- 🧵 NIC queue activity  
+- 🕒 Timeline correlation with CPU and GPU operations
+
+---
+
+## 📚 Additional Resources
+
+- [NVIDIA Nsight Systems Documentation](https://docs.nvidia.com/nsight-systems/)  
+- [OpenACC Programming Guide](https://www.openacc.org/)
 
 
 ## ✅ License
