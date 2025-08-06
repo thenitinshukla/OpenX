@@ -20,7 +20,9 @@ CFLAGS     = $(ACCFLAGS) $(GPG) $(OPTFLAGS) $(DEBUGFLAGS) $(INC_NVTX)
 LDFLAGS    = $(LIB_NVTX)
 
 # Nsight Systems options
-NSYSFLAGS  = --trace=openacc,cuda,nvtx --stats=true --force-overwrite=true
+NSYSFLAGS  = --trace=osrt,openacc,cuda,nvtx --stats=true --force-overwrite=true 
+
+## --sample=cpu --backtrace=fp  --capture-range=nvtx --nvtx-capture='main_loop' --env-var=NSYS_NVTX_PROFILER_REGISTER_ONLY=0
 
 # Source and Targets
 SRC_FILES  = openacc_test.c
